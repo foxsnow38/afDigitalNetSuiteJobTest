@@ -60,7 +60,6 @@ if(filteredArray[0].length == filteredArray[1].length && filteredArray[0].length
     if(filteredArray[2][index]==filteredArray[2][index2]) kod=true // kod esitse
     if(kdv&&kod){
       filteredArray[1][index] =parseInt( filteredArray[1][index])+ parseInt(filteredArray[1][index2] ) // ilk arrayde degerleri topla
-
       filteredArray[0].splice(index2,1) // diger arrayi sil
       filteredArray[1].splice(index2,1)
       filteredArray[2].splice(index2,1)
@@ -72,6 +71,7 @@ forceUpdate() // zorla renderla
  React.useEffect(()=>{
 let array = [ [0, 1, 8, 18, 18, 1], [10, 15, 12, 23, 30, 43], [`0071`, `0071`, `0073`, `0073`, `0071`, `0071`]] // baslangicta sorudaki girdi
 setKdvArray(array)
+inputChange()
  },[])
 
   if ( currencyArray != null) /* currencyArray ilk 10 ms bos geliyor*/return (
